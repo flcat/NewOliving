@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="650dp"
+    android:layout_height="1100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/paymethod_round"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/pay_round"
+            android:gravity="center"
+            android:layout_weight="0.7">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:text="결제 수단 선택"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/paymethod_round"
+            android:layout_weight="9.3"
+            android:weightSum="9"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/PaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="5.3"
+                android:weightSum="4"
+                android:paddingTop="10dp"
+                >
+                <LinearLayout
+                    android:id="@+id/smartpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/smartpay"
+                    android:weightSum="10"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/SelectPayIcon"
+                        android:layout_width="70dp"
+                        android:layout_gravity="center"
+                        android:layout_height="70dp"
+                        android:background="@drawable/cardicon" />
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                    </androidx.legacy.widget.Space>
+
+                    <ImageView
+                        android:id="@+id/Pay_Unclick"
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/unclick" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/smartpay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.3"
+                    android:orientation="horizontal"
+                    android:background="@drawable/payicons"
+                    android:visibility="visible"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:weightSum="4">
+
+                    <ImageView
+                        android:id="@+id/CardPay"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/SamsungPay"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.9"/>
+
+                    <ImageView
+                        android:id="@+id/KakaoPay"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/TossPay"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/UsePoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.9"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/usepoint"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/payunclick2"
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:visibility="gone"
+                        android:background="@drawable/unclick" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/UseMembership"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.9"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/coupon"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/payunclick3"
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="30dp"
+                        android:visibility="gone"
+                        android:background="@drawable/unclick" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/UseMembership2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/menu"
+                    android:visibility="gone"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.7"
+                android:weightSum="4"
+                android:padding="22dp">
+
+                <ImageView
+                    android:src="@drawable/drawable_dash_line"
+                    android:layerType="software"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/OrderCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="총 수량"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/OrderCount2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="0개"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/PayAmt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="상품 금액"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/PayAmt2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="000원"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/DisAmt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="할인 금액"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/DisAmt2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="-"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <ImageView
+                    android:src="@drawable/drawable_dash_line"
+                    android:layerType="software"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/TotalAmt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="총 합계"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/TotalAmt2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="000원"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+            </TableLayout>
+
+
+            <LinearLayout
+                android:id="@+id/totalText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/TotalTV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="총 3000원 입니다"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/Pay_Cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/paycancel"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:id="@+id/payBtn"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cardpay"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

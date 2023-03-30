@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cartItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2.1"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_line"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/ListLi"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/ItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="상품이름"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            android:paddingLeft="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/SelectNumLi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/cart_minus"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="#EBEBEB"
+                android:textColor="#000000"
+                android:text="-"/>
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:textSize="21dp"
+                android:gravity="center"
+                android:background="#EBEBEB"
+                android:text="1"/>
+
+            <TextView
+                android:id="@+id/cart_add"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="#EBEBEB"
+                android:textColor="#000000"
+                android:text="+"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ItemCost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:textSize="22dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:layout_marginRight="20dp"
+            android:text="가격"/>
+
+        <ImageView
+            android:id="@+id/Item_cancel"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.4"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/cancelbtn_round"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stockLi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+      >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="현재고: "
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/currentStock"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="수정 재고: "
+            android:textSize="20dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:minWidth="100dp"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25dp"/>
+
+    </LinearLayout>
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1">
+
+    </androidx.legacy.widget.Space>
+
+</LinearLayout>

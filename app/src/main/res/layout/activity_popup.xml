@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framePopup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".base.PopupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="5"
+        android:orientation="vertical"
+        android:background="@drawable/popup_round">
+
+        <!-- 팝업 제목영역 -->
+        <LinearLayout
+            android:id="@+id/popupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_gravity="center"
+            android:layout_weight="1.1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:padding="4dp">
+            <ImageView
+                android:id="@+id/popupLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ImageView>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="제목"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+        <!-- 팝업 내용영역 -->
+        <LinearLayout
+            android:id="@+id/popupDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.9"
+            android:orientation="vertical"
+            android:weightSum="1.45">
+
+
+            <!-- < 내용 > -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/imgLayout"
+                android:layout_height="0dp"
+                android:layout_weight="1.0"
+                android:weightSum="1.2"
+                android:orientation="horizontal">
+                <!-- 왼쪽 화살표 -->
+                <TextView
+                    android:id="@+id/focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:state_focused="true"
+                    android:drawable="@android:color/transparent" />
+                <LinearLayout
+                    android:id="@+id/LeftArrow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:weightSum="2.2"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="5dp">
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.01"/>
+
+                    <ImageView
+                    android:id="@+id/left_NT"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.18" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.01"/>
+                </LinearLayout>
+
+                <!-- 중간 내용 -->
+                <!-- Text만 있는 Li -->
+                <LinearLayout
+                    android:id="@+id/PopupTextLi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+                    <TextView
+                        android:id="@+id/noticeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="선택된 상품이 없습니다."
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/centerIV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <!-- imageLi -->
+                <LinearLayout
+                    android:id="@+id/PopupImageLi"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2.1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/leftImg"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/usecouponimg"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"/>
+
+                    <ImageView
+                        android:id="@+id/rightImg"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/usepointimg"/>
+
+                </LinearLayout>
+
+
+                <!-- 오른쪽 화살표 -->
+                <LinearLayout
+                    android:id="@+id/RightArrow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:weightSum="2.2"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.01"/>
+
+                    <ImageView
+                        android:id="@+id/right_NT"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.18"/>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.01"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- (onlyOKLi , TwoBtnLi 중 필요한 하나만 visible하여 사용)  -->
+            <!-- OK 버튼만 있는 레이아웃 -->
+            <LinearLayout
+                android:id="@+id/onlyOKLi"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.45"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:weightSum="3"
+                android:visibility="visible">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/OKBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="확인"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/okbtn_round"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:visibility="visible"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <!-- Cancel, Ok 레이아웃 -->
+            <LinearLayout
+                android:id="@+id/TwoBtnLi"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.45"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:weightSum="4"
+                android:visibility="gone">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.9"/>
+
+                <TextView
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="취소"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/rounded"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:visibility="visible"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+
+                <TextView
+                    android:id="@+id/TWO_Okbtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="확인"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/okbtn_round"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:visibility="visible"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.9"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

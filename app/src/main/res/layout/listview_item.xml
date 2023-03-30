@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:text="품명"
+        android:id="@+id/txtItemName"
+        android:textSize="20dp"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:text="수량"
+        android:id="@+id/itemQty"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@color/colorWhite"/>
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:gravity="right"
+        android:text="단가"
+        android:id="@+id/danga"
+        android:textSize="20dp"
+        android:textColor="@color/colorWhite"/>
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:gravity="right"
+        android:text="금액"
+        android:id="@+id/cost"
+        android:textSize="20dp"
+        android:textColor="@color/colorWhite"/>
+</LinearLayout>

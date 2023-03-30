@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "659420516919",
+    "project_id": "newoliving",
+    "storage_bucket": "newoliving.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659420516919:android:7474cc4c31625be17aa5b2",
+        "android_client_info": {
+          "package_name": "com.solgae.newoliving"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659420516919-admhjm06d3ngh32jc1g1hi111tphgch8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqKdGt2nnb3d1L3uIJRLPqpBTtBWDZJ5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659420516919-admhjm06d3ngh32jc1g1hi111tphgch8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

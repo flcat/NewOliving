@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">maps.daum-img.net</domain>
+        <domain includeSubdomains="true">dev.kepay.or.kr</domain>
+        <domain includeSubdomains="true">15.165.226.158</domain>
+        <domain includeSubdomains="true">52.79.94.143</domain>
+        <domain includeSubdomains="true">15.165.125.89</domain>
+        <domain includeSubdomains="true">qving.co.kr</domain>
+    </domain-config>
+</network-security-config>

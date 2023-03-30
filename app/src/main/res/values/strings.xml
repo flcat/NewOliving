@@ -1,0 +1,296 @@
+<resources>
+    <string name="app_name">NewOliving</string>
+
+    <string name="myOkButton">myOkButton</string>
+    <string name="myExitButton">myExitButton</string>
+
+    <string name="error_configuration">Please configure your serial port first.</string>
+    <string name="error_security">You do not have read/write permission to the serial
+		port.</string>
+    <string name="error_unknown">The serial port can not be opened for an unknown
+		reason.</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="fcm_message">FCM Message</string>
+
+    <string name="api_machine_master_update">
+        \"mac_code\":\"{mac_code}\",
+        \"token\":\"{token}\"
+    </string>
+
+    <string name="api_machine_master">
+        \"mac_code\":\"{mac_code}\"
+    </string>
+
+    <string name="bill_no">"계산서번호 : "</string>
+    <string name="mac_code">"포스번호 : "</string>
+    <string name="data_num">카드번호 :</string>
+    <string name="data_confirm_num">승인번호 :</string>
+    <string name="data_day">거래일자 :</string>
+    <string name="total_money">제품가액 :</string>
+    <string name="point_money">포 인 트 :</string>
+    <string name="dis_money">할인금액 :</string>
+    <string name="supply_money">공급가액 :</string>
+    <string name="tax_money">부가세액 :</string>
+    <string name="data_money">승인금액 :</string>
+    <string name="data_div">할부개월 :</string>
+    <string name="data_com">발급사명 :</string>
+    <string name="data_acquire_com">매입사명 :</string>
+
+    <!-- sql -->
+    <string name="api_cash_master_upload_data_header">
+        \"mac_code\":\"{mac_code}\",
+        \"pos_num\":\"{pos_num}\",
+        \"bill_no\":\"{bill_no}\",
+        \"userid\":\"{userid}\",
+        \"custom_id\":\"{custom_id}\",
+        \"total_money\":\"{total_money}\",
+        \"real_money\":\"{real_money}\",
+        \"cash_money\":\"{cash_money}\",
+        \"card_money\":\"{card_money}\",
+        \"point_money\":\"{point_money}\",
+        \"dis_money\":\"{dis_money}\",
+        \"coupon_money\":\"{coupon_money}\",
+        \"gift_money\":\"{gift_money}\",
+        \"giftcard_money\":\"{giftcard_money}\",
+        \"refund_money\":\"{refund_money}\",
+        \"sale_point_money\":\"{sale_point_money}\",
+        \"sale_cut_money\":\"{sale_cut_money}\",
+        \"supply_money\":\"{supply_money}\",
+        \"charge_money\":\"{charge_money}\",
+        \"tax_money\":\"{tax_money}\",
+        \"dis_type\":\"{dis_type}\",
+        \"sale_status\":\"{sale_status}\",
+        \"write_day\":\"{write_day}\",
+        \"cancel_reason\":\"{cancel_reason}\",
+        \"old_bill_no\":\"{old_bill_no}\",
+        \"is_cancel\":\"{is_cancel}\", \"cash_process\": [
+    </string>
+    <string name="api_cash_master_upload_data_cash_process">
+        \"main_code\":\"{main_code}\",
+        \"sub_code\":\"{sub_code}\",
+        \"step_code\":\"{step_code}\",
+        \"menu_style\":\"{menu_style}\",
+        \"pro_title\":\"{pro_title}\",
+        \"pro_code\":\"{pro_code}\",
+        \"unit_money\":\"{unit_money}\",
+        \"pro_cnt\":\"{pro_cnt}\",
+        \"dis_money\":\"{dis_money}\",
+        \"result_money\":\"{result_money}\"
+    </string>
+    <string name="api_cash_master_upload_data_cash_result">
+        \"data_type\":\"{data_type}\",
+        \"data_money\":\"{data_money}\",
+        \"data_action\":\"{data_action}\",
+        \"data_num\":\"{data_num}\",
+        \"data_div\":\"{data_div}\",
+        \"data_day\":\"{data_day}\",
+        \"data_confirm_num\":\"{data_confirm_num}\",
+        \"data_receipt_num\":\"{data_receipt_num}\",
+        \"data_van_info\":\"{data_van_info}\",
+        \"data_receipt_type\":\"{data_receipt_type}\",
+        \"data_receipt_input\":\"{data_receipt_input}\",
+        \"data_van\":\"{data_van}\",
+        \"write_day\":\"{write_day}\",
+        \"data_com\":\"{data_com}\",
+        \"data_acquire_com\":\"{data_acquire_com}\",
+        \"data_com_code\":\"{data_com_code}\",
+        \"data_acquire_com_code\":\"{data_acquire_com_code}\",
+        \"supply_money\":\"{supply_money}\",
+        \"charge_money\":\"{charge_money}\",
+        \"tax_money\":\"{tax_money}\",
+        \"cancel_reason\":\"{cancel_reason}\",
+        \"is_cancel\":\"{is_cancel}\"
+    </string>
+    <string name="report_header">
+        <![CDATA[
+        <head>
+            <meta charset="utf-8">
+            <title>A simple, clean, and responsive HTML invoice template</title>
+
+            <style>
+            .invoice-box {
+                max-width: 500px;
+                margin: auto;
+                padding: 30px;
+                border: 1px solid #eee;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+                font-size: 16px;
+                line-height: 24px;
+                font-family: \'Helvetica Neue\', \'Helvetica\', Helvetica, Arial, sans-serif;
+                color: #555;
+            }
+
+            .invoice-box table {
+                width: 100%;
+                line-height: inherit;
+                text-align: left;
+            }
+
+            .invoice-box table td {
+                padding: 5px;
+                vertical-align: top;
+            }
+
+            .invoice-box table tr td:nth-child(2) {
+                text-align: left;
+            }
+
+             .invoice-box table tr.heading td:nth-child(3) {
+                text-align: center;
+            }
+
+            .invoice-box table tr.top table td {
+                padding-bottom: 20px;
+            }
+
+            .invoice-box table tr.top td.title {
+                font-size: 45px;
+                line-height: 45px;
+                text-align: center;
+                color: #333;
+            }
+
+            .invoice-box table tr.information table td {
+                padding-bottom: 10px;
+            }
+
+            .invoice-box table tr.heading tr {
+                weight: 100px;
+            }
+
+            .invoice-box table tr td:nth-child(1) {
+                text-align: left;
+            }
+
+            .invoice-box table tr td:nth-child(2) {
+                text-align: right;
+            }
+
+            .invoice-box table tr.heading td {
+                background: #eee;
+                border-bottom: 1px solid #ddd;
+                font-weight: bold;
+            }
+
+            .invoice-box table tr.details td {
+                padding-bottom: 20px;
+            }
+
+            .invoice-box table tr.heading td:nth-child(2){
+                        text-align: center;
+            }
+
+            .invoice-box table tr.heading td:nth-child(3){
+                        text-align: center;
+            }
+
+            .invoice-box table tr.heading td:nth-child(4){
+                        text-align: center;
+            }
+
+            .invoice-box table tr.item td:nth-child(3){
+                        text-align: center;
+            }
+
+            .invoice-box table tr.item td:nth-child(4){
+                        text-align: right;
+            }
+
+            .invoice-box table tr.total_detail.table td:nth-child(3){
+                        text-align: left;
+            }
+            .invoice-box table tr.total_detail td.total_detail_bill{
+                        text-align: right;
+                      font-weight: bold;
+            }
+
+            .invoice-box table tr.total_detail td.total_detail_bill_title{
+                    font-weight: bold;
+            }
+
+            .invoice-box table tr.total_detail:nth-child(2) {
+                border-bottom: 1px solid #eee;
+            }
+
+            .invoice-box table tr.item td{
+                border-bottom: 1px solid #eee;
+            }
+
+            .invoice-box table tr.heading td {
+                background: #eee;
+                border-bottom: 1px solid #ddd;
+                font-weight: bold;
+            }
+            .invoice-box table tr.total td:nth-child(1){
+                border-bottom: 1px solid #ddd;
+            }
+            .invoice-box table tr.total td:nth-child(2){
+                border-bottom: 1px solid #ddd;
+            }
+            .invoice-box table tr.total_detail td:nth-child(4){
+                        text-align: right;
+            }
+            .invoice-box tr.border_bottom_line td:nth-child(1){
+                text-align: left;
+                    border-bottom: 1px solid #eee;
+                font-weight: bold;
+            }
+            .invoice-box table tr.total_detail table tr.border_bottom td:nth-child(1){
+                        text-align: left;
+                            border-bottom: 1px solid #eee;
+                        font-weight: bold;
+            }
+           .invoice-box table tr.total_detail table tr.border_bottom td:nth-child(2){
+                        text-align: left;
+                            border-bottom: 1px solid #eee;
+                        font-weight: bold;
+            }
+
+           .invoice-box table tr.total_detail table tr.border_bottom td:nth-child(3){
+                       text-align: right;
+                            border-bottom: 1px solid #eee;
+                      font-weight: bold;
+            }
+
+            .invoice-box table tr.total_detail td:nth-child(2){
+                        text-align: right;
+            }
+
+            .invoice-box table tr.title td{
+                    text-align: center;
+            }
+            @media only screen and (max-width: 500px) {
+                .invoice-box table tr.top table td {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                }
+
+                .invoice-box table tr.information table td {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            /** RTL **/
+            .rtl {
+                direction: rtl;
+                font-family: Tahoma, \'Helvetica Neue\', \'Helvetica\', Helvetica, Arial, sans-serif;
+            }
+
+            .rtl table {
+                text-align: right;
+            }
+
+            .rtl table tr td:nth-child(4) {
+                text-align: left;
+            }
+            </style>
+        </head>
+        ]]>
+    </string>
+
+    <string name="bitmap_generated_from_html">Bitmap generated from html</string>
+</resources>

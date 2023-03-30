@@ -1,0 +1,2 @@
+include ':app',':fullscreenmediacontrollerlibrary' , ':library', ':serialport'
+rootProject.name = "NewOliving"

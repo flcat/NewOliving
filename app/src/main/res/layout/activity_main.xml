@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    android:weightSum="12"
+    android:orientation="vertical">
+
+    <!--  1.아이템 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:id="@+id/seatLegendLayout">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+
+                <!-- 47개 칼럼에 맞춰 width 설정해둠 -->
+                <LinearLayout
+                    android:id="@+id/GridLinearLi"
+                    android:layout_width="11800dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <GridView
+                        android:id="@+id/ItemGridView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="15dp"
+                        android:columnWidth="285dp"
+                        android:gravity="center"
+                        android:numColumns="47"
+                        android:horizontalSpacing="1dp"
+                        android:scrollbarAlwaysDrawHorizontalTrack="true"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:scrollbars="horizontal"
+                        android:stretchMode="none"
+                        android:verticalSpacing="1dp">
+
+                    </GridView>
+                </LinearLayout>
+            </FrameLayout>
+        </HorizontalScrollView>
+
+
+<!--                &lt;!&ndash;  전체상품 그리드뷰   &ndash;&gt;-->
+<!--                <GridView-->
+<!--                    android:id="@+id/ItemGridView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:padding="8dp"/>-->
+
+    </LinearLayout>
+
+    <!--  2. 장바구니 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:weightSum="5"
+        android:orientation="vertical">
+        <!-- 장바구니 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="@drawable/cartback"
+            >
+        </LinearLayout>
+        <!-- 장바구니 하단 -->
+        <LinearLayout
+            android:id="@+id/AllCartLi"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.2"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/BeforeCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cartitemback"/>
+
+            <!-- 카트영역 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7.5">
+                <ScrollView
+                    android:id="@+id/CartScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:scrollbarSize="3dp">
+                    <LinearLayout
+                        android:id="@+id/Main_CartLi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="3dp">
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.01"
+                android:background="@color/gray"/>
+
+            <!-- 로고, 버튼영역 -->
+            <LinearLayout
+                android:id="@+id/LogoCartArea"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:weightSum="10"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/carticon"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="영수증"
+                    android:gravity="center_horizontal|center_vertical"
+                    style="@style/PayStyle"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5.5"
+                    android:weightSum="5"
+                    android:padding="14dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+                        <TextView
+                            android:id="@+id/Main_OrderCount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="총 수량"
+                            style="@style/PayStyle"/>
+                        <TextView
+                            android:id="@+id/Main_OrderCount2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="0개"
+                            style="@style/PayStyle" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+                        <TextView
+                            android:id="@+id/Main_PayAmt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="상품 금액"
+                            style="@style/PayStyle"/>
+                        <TextView
+                            android:id="@+id/Main_PayAmt2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="000원"
+                            style="@style/PayStyle" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:paddingBottom="10dp">
+                        <TextView
+                            android:id="@+id/Main_DisAmt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="할인 금액"
+                            style="@style/PayStyle" />
+                        <TextView
+                            android:id="@+id/Main_DisAmt2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="-"
+                            style="@style/PayStyle"/>
+                    </TableRow>
+
+                    <ImageView
+                        android:src="@drawable/drawable_dash_line"
+                        android:layerType="software"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"/>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="1"
+                        android:paddingTop="10dp">
+                        <TextView
+                            android:id="@+id/Main_TotalAmt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="최종 결제 금액"
+                            style="@style/PayStyle" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="1">
+                    <TextView
+                        android:id="@+id/Main_TotalAmt2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="000원"
+                        android:textColor="@color/red"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.03"
+        android:background="@color/gray"/>
+
+    <!--  3. 키보드 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:weightSum="10"
+        android:orientation="horizontal">
+
+        <!-- 제품번호 및 버튼 영역-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <!-- 제품 번호 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/keyboardok_round">
+                <TextView
+                    android:id="@+id/KeyEnterTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    style="@style/BtnOKStyle"/>
+            </LinearLayout>
+
+            <!-- 하단 설명 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="결제를 진행하시거나\n구매하실 상품을 담아주세요."
+                    style="@style/InfoStyle"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+
+            <!-- 결제버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:weightSum="2"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/InCartBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cartbeforebtn"/>
+
+                <ImageView
+                    android:id="@+id/PayBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/paybtn"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 키보드 영역-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:weightSum="4"
+            android:orientation="vertical"
+            android:padding="19dp">
+
+            <!-- 1 2 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/Btn1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="1"/>
+                <TextView
+                    android:id="@+id/Btn2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="2"/>
+                <TextView
+                    android:id="@+id/Btn3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="3"/>
+            </LinearLayout>
+
+            <!-- 4 5 6 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/Btn4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="4"/>
+                <TextView
+                    android:id="@+id/Btn5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="5"/>
+                <TextView
+                    android:id="@+id/Btn6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="6"/>
+            </LinearLayout>
+
+            <!-- 7 8 9 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/Btn7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="7"/>
+                <TextView
+                    android:id="@+id/Btn8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="8"/>
+                <TextView
+                    android:id="@+id/Btn9"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="9"/>
+            </LinearLayout>
+
+            <!-- 4 5 6 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/BtnBack"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:background="@drawable/backbtn"/>
+                <TextView
+                    android:id="@+id/Btn0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/BtnStyle"
+                    android:text="0"/>
+                <TextView
+                    android:id="@+id/BtnCheck"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/checkbtn"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
